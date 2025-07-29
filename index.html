@@ -13,55 +13,49 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <div class="background-radial"></div>
-    <header>
-      <h1>Lista de Tareas</h1>
-    </header>
-    <main>
-      <section id="task-list">
+    <div class="container">
+      <header>
         <div>
-          <h2>Tareas Pendientes</h2>
+          <h2>To-Do List</h2>
+        </div>
+        <nav>
+          <a href="#add-task-form">Añadir Tarea</a>
+          <a href="#tasks">Ver Tareas Pendientes</a>
+          <a href="#completed-tasks">Ver Tareas Completadas</a>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <h1 class="title">Lista de Tareas</h1>
+
+        <form id="add-task-form">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Añadir nueva tarea"
+            required
+          />
+          <button id="add-task-btn" type="submit">Añadir Tarea</button>
+        </form>
+
+        <section class="task-section">
+          <h2 class="section-title">Tareas Pendientes</h2>
           <ul id="tasks">
-            <li class="task-card">
-              <div class="task-content">
-                <p class="task-text">Comprar víveres</p>
-                <div class="buttons">
-                  <button class="complete-task">Completar</button>
-                  <button class="delete-task">Eliminar</button>
-                </div>
-              </div>
-            </li>
-
-            <li class="task-card">
-              <div class="task-content">
-                <p class="task-text">Ir al médico</p>
-                <div class="buttons">
-                  <button class="complete-task">Completar</button>
-                  <button class="delete-task">Eliminar</button>
-                </div>
-              </div>
-            </li>
+            <!-- Tareas Pendientes -->
           </ul>
-        </div>
+        </section>
 
-        <div>
-          <h2>Tareas Completadas</h2>
+        <section class="task-section">
+          <h2 class="section-title">Tareas Completadas</h2>
           <ul id="completed-tasks">
-            <li class="task-card">
-              <div class="task-content">
-                <p class="task-text">Enviar el informe</p>
-                <div class="buttons">
-                  <button class="delete-task">Eliminar</button>
-                </div>
-              </div>
-            </li>
+            <!-- Tareas Completadas -->
           </ul>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
