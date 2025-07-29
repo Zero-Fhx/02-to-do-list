@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <meta
+      name="description"
+      content="Una simple aplicación de lista de tareas para organizar tu día a día."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="background-radial"></div>
+    <header>
+      <h1>Lista de Tareas</h1>
+    </header>
+    <main>
+      <section id="task-list">
+        <div>
+          <h2>Tareas Pendientes</h2>
+          <ul id="tasks">
+            <li class="task-card">
+              <div class="task-content">
+                <p class="task-text">Comprar víveres</p>
+                <div class="buttons">
+                  <button class="complete-task">Completar</button>
+                  <button class="delete-task">Eliminar</button>
+                </div>
+              </div>
+            </li>
+
+            <li class="task-card">
+              <div class="task-content">
+                <p class="task-text">Ir al médico</p>
+                <div class="buttons">
+                  <button class="complete-task">Completar</button>
+                  <button class="delete-task">Eliminar</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Tareas Completadas</h2>
+          <ul id="completed-tasks">
+            <li class="task-card">
+              <div class="task-content">
+                <p class="task-text">Enviar el informe</p>
+                <div class="buttons">
+                  <button class="delete-task">Eliminar</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

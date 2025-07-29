@@ -1,0 +1,96 @@
+body {
+  font-family: "Onest", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 2rem;
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+.background-radial {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-image: radial-gradient(
+    circle 500px at 50% 200px,
+    #3e3e3e,
+    transparent
+  );
+}
+
+header {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  color: #f1f5f9;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-card {
+  background-color: #1e293b; /* slate-800 */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 163, 255, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 8px 16px rgba(0, 163, 255, 0.15);
+}
+
+.task-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.task-text {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  flex: 1;
+  color: #f8fafc; /* texto claro */
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  border: none;
+  border-radius: 0.375rem;
+  background-color: #00a3ff;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0081cc;
+  transform: translateY(-0.125rem) scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
