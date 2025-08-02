@@ -118,16 +118,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("task-input");
   const addBtn = document.getElementById("add-task-btn");
 
-  addBtn.addEventListener("click", () => {
+  addBtn.addEventListener("click", (event) => {
+    event.preventDefault();
     if (input.value.trim()) {
       addTask(input.value);
       input.value = "";
     }
   });
 
-  // También puedes permitir Enter para agregar
-  input.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
+  input.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
       addTask(input.value);
       input.value = "";
     }
@@ -137,6 +137,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // tarea de ejemplo
+addTask("Estudiar JavaScript");
+addTask("Estudiar JavaScript");
+addTask("Estudiar JavaScript");
+addTask("Estudiar JavaScript");
+addTask("Estudiar JavaScript");
+addTask("Estudiar JavaScript");
+addTask("Estudiar JavaScript");
 addTask("Estudiar JavaScript");
 // tarea de ejemplo
 addTask("Hacer ejercicio");
