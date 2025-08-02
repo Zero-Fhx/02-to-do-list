@@ -154,9 +154,7 @@ function loadTasks() {
     nextId = 1;
     renderTasks();
     return;
-  }
-
-  if (storedTasks) {
+  } else {
     const parsed = JSON.parse(storedTasks);
     tasks = parsed.map((task) => ({
       ...task,
