@@ -165,5 +165,3 @@ function loadTasks() {
     renderTasks();
   }
 }
-
-console.log(JSON.parse(localStorage.getItem("tasks")));
