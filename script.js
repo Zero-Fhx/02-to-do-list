@@ -147,6 +147,15 @@ function saveTasks() {
 
 function loadTasks() {
   const storedTasks = localStorage.getItem("tasks");
+
+  if (!storedTasks) {
+    // Si no hay tareas guardadas, inicializar con un array vacío
+    tasks = [];
+    nextId = 1;
+    renderTasks();
+    return;
+  }
+
   if (storedTasks) {
     const parsed = JSON.parse(storedTasks);
     tasks = parsed.map((task) => ({
