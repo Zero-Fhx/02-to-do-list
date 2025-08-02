@@ -112,6 +112,9 @@ function renderTasks() {
     noCompletedMessage.textContent = "No hay tareas completadas.";
     completedList.appendChild(noCompletedMessage);
   }
+
+  // Guardar tareas en localStorage
+  saveTasks();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -133,22 +136,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  renderTasks();
+  loadTasks();
 });
 
-// tarea de ejemplo
-addTask("Estudiar JavaScript");
-addTask("Estudiar JavaScript");
-addTask("Estudiar JavaScript");
-addTask("Estudiar JavaScript");
-addTask("Estudiar JavaScript");
-addTask("Estudiar JavaScript");
-addTask("Estudiar JavaScript");
-addTask("Estudiar JavaScript");
-// tarea de ejemplo
-addTask("Hacer ejercicio");
-// tarea de ejemplo
-addTask("Leer un libro sobre desarrollo web");
+// TODO: This don't work, all methods about tasks don't work
+// Métodos localStorage
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
 
-// completar una tarea de ejemplo
-completeTask(1);
+function loadTasks() {
+  const storedTasks = localStorage.getItem("tasks");
+  if (storedTasks) {
+    const parsed = JSON.parse(storedTasks);
+    tasks = parsed.map((task) => ({
+      ...task,
+      createdAt: new Date(task.createdAt),
+      updatedAt: new Date(task.updatedAt),
+    }));
+    nextId = tasks.length ? Math.max(...tasks.map((t) => t.id)) + 1 : 1;
+    renderTasks();
+  }
+}
+
+console.log(JSON.parse(localStorage.getItem("tasks")));
