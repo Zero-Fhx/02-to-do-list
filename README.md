@@ -254,12 +254,6 @@ Este es un proyecto personal de aprendizaje, pero si encuentras mejoras o tienes
 - 💼 LinkedIn: [Erick Obed Flores Ricra](https://www.linkedin.com/in/erick-obed-flores-ricra-14a121280)
 - 📧 Email: erickflores170404@gmail.com
 
-## 🔗 Proyectos Relacionados
-
-- 📄 **[Anterior: Página Personal](https://github.com/Zero-Fhx/01-pagina-personal-simple)** - Proyecto con HTML y CSS
-- 🧮 **[Siguiente: Calculadora](https://github.com/Zero-Fhx/03-calculadora-basica)** - Proyecto con JavaScript avanzado
-- 📊 **[Ver todos mis proyectos](https://github.com/Zero-Fhx?tab=repositories)** - Perfil de GitHub
-
 ---
 
 **🤖 Desarrollo Asistido por IA:** Este proyecto fue desarrollado con la asistencia de inteligencia artificial para la búsqueda de información, resolución de problemas técnicos, optimización de código, consulta de conceptos desconocidos y creación de esta documentación.
