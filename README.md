@@ -66,7 +66,7 @@ Aplicación web para gestionar tareas diarias con una interfaz moderna y funcion
 ## 📂 Estructura del Proyecto
 
 ```
-02-To-Do List/
+02-to-do-list/
 ├── index.html              # Página principal
 ├── styles.css              # Estilos CSS
 ├── script.js               # Lógica JavaScript
@@ -80,7 +80,7 @@ Aplicación web para gestionar tareas diarias con una interfaz moderna y funcion
 ### Clonar el repositorio
 
 ```bash
-git clone https://github.com/Zero-Fhx/02-todo-list.git
+git clone https://github.com/Zero-Fhx/02-to-do-list.git
 cd 02-todo-list
 ```
 
@@ -115,7 +115,7 @@ Este proyecto incluye todas las características esenciales de una To-Do List:
 
 ## 🌐 Demo en Vivo
 
-🔗 **[Ver Demo](https://zero-fhx.github.io/02-To-Do-List/)** (GitHub Pages)
+🔗 **[Ver Demo](https://zero-fhx.github.io/02-to-do-list/)** (GitHub Pages)
 
 ## 📸 Captura de Pantalla
 
