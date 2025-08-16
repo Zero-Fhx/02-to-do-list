@@ -126,35 +126,35 @@ Este proyecto incluye todas las características esenciales de una To-Do List:
 ### Estructura de Datos de Tareas
 
 ```javascript
-function createTask(title) {
+function createTask (title) {
   return {
     id: nextId++,
-    title: title,
+    title,
     completed: false,
     createdAt: new Date(),
-    updatedAt: new Date(),
-  };
+    updatedAt: new Date()
+  }
 }
 ```
 
 ### Gestión de Estado con localStorage
 
 ```javascript
-function saveTasks() {
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+function saveTasks () {
+  localStorage.setItem('tasks', JSON.stringify(tasks))
 }
 
-function loadTasks() {
-  const storedTasks = localStorage.getItem("tasks");
+function loadTasks () {
+  const storedTasks = localStorage.getItem('tasks')
   if (storedTasks) {
-    const parsed = JSON.parse(storedTasks);
+    const parsed = JSON.parse(storedTasks)
     tasks = parsed.map((task) => ({
       ...task,
       createdAt: new Date(task.createdAt),
-      updatedAt: new Date(task.updatedAt),
-    }));
-    nextId = tasks.length ? Math.max(...tasks.map((t) => t.id)) + 1 : 1;
-    renderTasks();
+      updatedAt: new Date(task.updatedAt)
+    }))
+    nextId = tasks.length ? Math.max(...tasks.map((t) => t.id)) + 1 : 1
+    renderTasks()
   }
 }
 ```
@@ -178,16 +178,33 @@ function loadTasks() {
 ### Renderizado Dinámico
 
 ```javascript
-function renderTasks() {
-  const pendingList = document.getElementById("tasks");
-  const completedList = document.getElementById("completed-tasks");
+function renderTasks () {
+  const pendingList = document.getElementById('tasks')
+  const completedList = document.getElementById('completed-tasks')
 
-  // Separación automática entre pendientes y completadas
+  // Limpiar listas
+  pendingList.innerHTML = ''
+  completedList.innerHTML = ''
+
   tasks.forEach((task) => {
-    // Creación dinámica de elementos DOM
-    // Manejo de timestamps para mostrar fechas
-    // Gestión de botones según estado
-  });
+    const li = document.createElement('li')
+    li.className = 'task-card'
+
+    const content = document.createElement('div')
+    content.className = 'task-content'
+
+    const textContainer = document.createElement('div')
+    textContainer.className = 'task-text-container'
+
+    const text = document.createElement('p')
+    text.className = 'task-text'
+    text.textContent = task.title
+    textContainer.appendChild(text)
+
+    const buttons = document.createElement('div')
+    buttons.className = 'buttons'
+    // ...existing code...
+  })
 }
 ```
 
